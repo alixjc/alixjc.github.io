@@ -5,12 +5,17 @@ body {
 }
 
 body {
-  background: #4281a4;
+  background:#247BA0;
   position: relative;
 }
 
+.details {
+  color: white;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
 .profile-link {
-  color: #E6B89c;
+  color: #b2dbbf;
   font-size: 12px;
   display: block;
 }
@@ -22,18 +27,30 @@ body {
 
 a:hover,
 a:visited:hover {
-  color: #ee938c;
+  color:#FF1654;
 }
 
 a:visited {
   color: #f58428;
 }
 
+.square-one .inner {
+  background: #F3FFBD;
+}
+
+.square-two .inner {
+  background: #7ac043;
+}
+
+.square-three .inner {
+  background: #019cdc;
+}
+
 .outer {
   box-sizing: border-box;
   padding: 40px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: stretch;
@@ -44,8 +61,8 @@ a:visited {
   align-items: stretch;
 }
 
+
 .left {
-  /* border: 1px solid blue; */
   flex-grow: 1;
   flex-shrink: 0;
   display: flex;
@@ -55,7 +72,6 @@ a:visited {
 }
 
 .right {
-  /* border: 1px solid green; */
   flex-grow: 1;
   flex-shrink: 0;
   display: flex;
@@ -67,22 +83,13 @@ a:visited {
   position: relative;
   width: 340px;
   height: 345px;
-  /* border: 1px solid red; */
   box-sizing: border-box;
   margin: 0 auto;
 }
 
-.glumac {
-  position: absolute;
-  color: white;
-  left: 144px;
-  top: 144px;
-}
-
 .square {
-  /* border: 1px solid orange; */
   position: absolute;
-  clear: both;
+  display: flex;
   height: 240px;
   width: 240px;
   transition: all 0.5s ease-out;
@@ -94,15 +101,15 @@ a:visited {
   height: 240px;
   width: 4px;
   margin-right: 8px;
-  float: left;
 }
 
-.square-one--initial {
+
+.square-one {
   left: 48px;
   top: 52px;
 }
 
-.square-one--expanded {
+.wrap:hover .square-one {
   left: 0;
   top: 0;
 }
@@ -112,30 +119,12 @@ a:visited {
   top: 52px;
 }
 
-.square-three--initial {
+.square-three {
   left: 56px;
   top: 52px;
 }
 
-.square-three--expanded {
+.wrap:hover .square-three {
   left: 104px;
   top: 104px;
-}
-
-.square-one .inner {
-  background: #ee938c;
-}
-
-.square-two .inner {
-  background: #9caeb7;
-}
-
-.square-three .inner {
-  background: #E6B89c;
-}
-
-.details {
-  color: white;
-  font-family: 'Ubuntu Mono', monospace;
-  /* border: 1px solid red; */
 }
